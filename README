@@ -1,0 +1,29 @@
+DATA
+'Images' folder - Contains the image files associated with the 'oramas_data_with_names.csv' file. The naming convention in this folder 
+follows the indexes in the oramas_data_with_names.csv file e.g. '0.jpg' corresponds to index 0 in the 'oramas_data_with_names.csv' 
+file, '1.jpg' corresponds to index 1 in the 'oramas_data_categories_and_labels.csv'. There are multiple entries in the 'oramas_data_with_names.csv' for the same album, so there are duplicated images in the 'Images' folder.
+
+NOTEBOOKS
+If you just want to get the album images for an input image, skip straight to TestOnOtherImages.ipynb. If you want to run the whole process, run the notebooks in the order given below.
+
+GetSongNamesAndArtistNames.ipynb - Use Million Song Dataset summary file to get song name, artist name and album name and join this information onto the Oramas dataset
+
+GetImages.ipynb - Get the images associated with the Oramas data and save them in the 'Images' folder
+
+RunPreTrainedNetworkForGenre.ipynb: Try to predict genre using a pretrained CNN
+
+GenreErrorAnalysis.ipynb: Conduct error analysis on the results from using the pretrained CNN to predict genre.
+
+UsePreTrainedModelForImageClassification.ipynb: Use a pretrained CNN to perform image classification on the images in the Oramas dataset.
+
+Create_Content_And_Style_Matrices.ipynb: Create content and style matrices for the images in the Oramas dataset.
+
+CreateCombinedMatrices.ipynb: Combine the content matrices into one overall style matrix and combine the style matrices into one overall style matrix.
+
+BiasTesting.ipynb: Get top 10 matches for each image in the Fairface dataset. 
+
+InvestigateBiasResults.ipynb: Take the outputs from the BiasTesting.ipynb notebook and generate counts for the album images that were matched
+
+CompareTopImageCounts.ipynb: Check for ethnicity-specific patterns in the matches with each image in the FairFace dataset. 
+
+TestOnOtherImages.ipynb: Get the 10 closest matches for an input image.
